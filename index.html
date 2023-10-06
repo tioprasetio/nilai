@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hitung Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="judul">Hitung Nilai Mahasiswa</h1>
+        <form id="nilaiForm">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Masukkan Nilai" id="nilai" min="0" max="100"
+                    required>
+            </div>
+            <button type="button" class="buttonSubmit" onclick="hitungNilai()">Submit</button>
+            <button type="button" class="buttonHapus" onclick="hapusNilai()">Hapus</button>
+        </form>
+
+    </div>
+
+    <div class="contNilai" id="contNilai">
+        <ul id="daftarNilai">
+        </ul>
+        <p id="nilaiTertinggi"></p>
+        <p id="nilaiTerendah"></p>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
