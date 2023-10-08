@@ -4,7 +4,9 @@
 <head>
     <title>Hitung Nilai Mahasiswa</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn-icons-png.flaticon.com/128/1157/1157109.png" rel="icon" type="images/x-icon">
 </head>
 
 <body>
@@ -12,14 +14,20 @@
         <h1 class="judul">Hitung Nilai Mahasiswa</h1>
         <form id="nilaiForm">
             <div class="form-group">
+                <i class="fa-solid fa-user"></i>
                 <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
             </div>
             <div class="form-group">
+                <i class="fa-solid fa-pen-to-square"></i>
                 <input type="number" class="form-control" placeholder="Masukkan Nilai" id="nilai" min="0" max="100"
                     required>
             </div>
-            <button type="button" class="buttonSubmit" onclick="hitungNilai()">Submit</button>
-            <button type="button" class="buttonHapus" onclick="hapusNilai()">Hapus</button>
+            <button type="button" class="buttonTambah" onclick="hitungNilai()">
+                <i class="fa-regular fa-paper-plane"></i> Tambah
+            </button>
+            <button type="button" class="buttonHapus" id="buttonHapus" onclick="hapusNilai()">
+                <i class="fa-regular fa-trash-can"></i> Hapus
+            </button>
         </form>
 
     </div>

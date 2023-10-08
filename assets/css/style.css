@@ -19,7 +19,7 @@ body {
 
 .contNilai {
     max-width: 600px;
-    padding: 20px;
+    padding: 0 20px;
     margin-top: 20px;
     background-color: #f0f0f0;
     box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
@@ -29,6 +29,7 @@ body {
 .judul {
     text-align: center;
     color: #353535;
+    font-size: 1.6rem;
 }
 
 form {
@@ -38,15 +39,10 @@ form {
 
 .form-group {
     margin-bottom: 15px;
-}
-
-label {
-    font-weight: bold;
-}
-
-.form-control {
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 0.8rem;
     background-color: #f0f0f0;
     border-radius: 0.5rem;
     border: none;
@@ -56,7 +52,24 @@ label {
     box-shadow: inset 3px 3px 6px #b8b9be, inset -3px -3px 6px #fff;
 }
 
-.buttonSubmit {
+.form-group i {
+    margin-right: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+
+.buttonTambah {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -65,18 +78,29 @@ label {
     cursor: pointer;
     font-size: 1.2rem;
     box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+    transition: background-color 0.3s ease;
+}
+
+.buttonTambah:hover{
+    background-color: #004a99;
 }
 
 .buttonHapus {
     background-color: #ff0037;
     color: #fff;
     border: none;
+    display: none;
     margin-top: 15px;
     padding: 0.6rem 0;
     border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1.2rem;
     box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+    transition: background-color 0.3s ease;
+}
+
+.buttonHapus:hover{
+    background-color: #b30027;
 }
 
 ul {
