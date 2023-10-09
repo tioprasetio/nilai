@@ -35,9 +35,6 @@ let contNilai = document.getElementById('contNilai');
 //container nilai display awal none
 contNilai.style.display = "none";
 
-//tombol hapus display awal none
-// buttonHapus.style.display = "none";
-
 //func untuk hanya huruf yang boleh diinput
 function isAlpha(input) {
     return /^[A-Za-z\s]+$/.test(input);
@@ -98,11 +95,19 @@ function hitungNilai() {
     document.getElementById("nama").value = "";
     document.getElementById("nilai").value = "";
 
-    //untuk mencari dan menampilkan nilai tertinggi dari daftar mahasiswa yang disimpan dalam array jmlMahasiswa
-    document.getElementById("nilaiTertinggi").innerHTML = "Nilai Tertinggi: " + Math.max(...jmlMahasiswa.map(mahasiswa => mahasiswa.nilai));
+    // Mencari nilai tertinggi
+    var nilaiTertinggi = Math.max(...jmlMahasiswa.map(mahasiswa => mahasiswa.nilai));
+    // Mencari nama mahasiswa dengan nilai tertinggi
+    var mahasiswaTertinggi = jmlMahasiswa.find(mahasiswa => mahasiswa.nilai === nilaiTertinggi);
+    // Menampilkan nilai tertinggi dan nama mahasiswa dengan nilai tertinggi
+    document.getElementById("nilaiTertinggi").innerHTML = "Nilai Tertinggi: " + nilaiTertinggi + " (" + mahasiswaTertinggi.nama + ")";
 
-    //untuk mencari dan menampilkan nilai terendah dari daftar mahasiswa yang disimpan dalam array 
-    document.getElementById("nilaiTerendah").innerHTML = "Nilai Terendah: " + Math.min(...jmlMahasiswa.map(mahasiswa => mahasiswa.nilai));
+    // Mencari nilai terendah
+    var nilaiTerendah = Math.min(...jmlMahasiswa.map(mahasiswa => mahasiswa.nilai));
+    // Mencari nama mahasiswa dengan nilai terendah
+    var mahasiswaTerendah = jmlMahasiswa.find(mahasiswa => mahasiswa.nilai === nilaiTerendah);
+    // Menampilkan nilai terendah dan nama mahasiswa dengan nilai terendah
+    document.getElementById("nilaiTerendah").innerHTML = "Nilai Terendah: " + nilaiTerendah + " (" + mahasiswaTerendah.nama + ")";
 
     //untuk menampilkan elemen container nilai setelah pengguna menekan tombol tambah yang sebelumnya display none
     contNilai.style.display = "block";
